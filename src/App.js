@@ -32,7 +32,10 @@ function Board() {
   } else {
     status = "Next player: " + (xIsNext ? "X" : "O");
   }
-
+  function restart() {
+    setSquares(Array(9).fill(null));
+    setXIsNext(true);
+  }
   return (
     <>
       <div className="status">{status}</div>
@@ -51,19 +54,19 @@ function Board() {
         <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
         <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
       </div>
-      
+      <button className="restart-button" onClick={restart}>Restart Game</button>
     </>
   );
 };
 
-export default function Game(){
-  return(
+export default function Game() {
+  return (
     <div className="game">
-    <div className="game-board">
-      <Board />
+      <div className="game-board">
+        <Board />
+      </div>
+
     </div>
-   
-  </div>
   )
 }
 
