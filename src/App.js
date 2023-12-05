@@ -38,6 +38,7 @@ function Board() {
   }
   return (
     <>
+      <div className="board">
       <div className="status">{status}</div>
       <div className='board-row'>
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
@@ -55,6 +56,8 @@ function Board() {
         <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
       </div>
       <button className="restart-button" onClick={restart}>Restart Game</button>
+      </div>
+      
     </>
   );
 };
