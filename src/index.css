@@ -11,6 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+body{
+  background-color: beige;
+}
+.main_section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .square{
   background-color: rgba(137, 43, 226, 0.436);
   border: 1px solid #999;
